@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5 mb-4">
+        Bizdin Qoldanushylarymyz
+    </h1>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Aty</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="u: ${users}">
+            <td th:text="${u.name}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
